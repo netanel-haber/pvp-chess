@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{213B96E4-E742-4FAA-A9C8-3827AB0D6385}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Chess___netanel</RootNamespace>
+    <AssemblyName>Chess - netanel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="Admin_EndGameRelatedFunctionality.cs" />
+    <Compile Include="Admin_Exceptions.cs" />
+    <Compile Include="Admin_MovingAndRemovingFunctionality.cs" />
+    <Compile Include="Admin_TimerRelatedFunctionality.cs" />
+    <Compile Include="BoardScreenshot.cs" />
+    <Compile Include="ChessBoards.cs" />
+    <Compile Include="ThreatsPackage.cs" />
+    <Compile Include="SingleThreatPackage.cs" />
+    <Compile Include="ChessMove.cs" />
+    <Compile Include="ChessUtilities.cs" />
+    <Compile Include="ChessPiece.cs" />
+    <Compile Include="EndOfGameMessages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EndOfGameMessages.Designer.cs">
+      <DependentUpon>EndOfGameMessages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game UI.Designer.cs">
+      <DependentUpon>Game UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="PromotionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PromotionDialog.Designer.cs">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EndOfGameMessages.resx">
+      <DependentUpon>EndOfGameMessages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game UI.resx">
+      <DependentUpon>Game UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PromotionDialog.resx">
+      <DependentUpon>PromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\board.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\board.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\board1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B_Rook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\board2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\board3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B_Knight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B_Pawn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B_Queen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B_Bishop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B_King.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_Rook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_Bishop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_King.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_Knight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_Pawn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W_Queen.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
